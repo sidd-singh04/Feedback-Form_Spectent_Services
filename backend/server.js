@@ -28,7 +28,7 @@ app.post("/feedback", (req, res) => {
       return res.status(400).json({ message: "Fields cannot be empty" });
     }
 
-    // simple email check (not perfect but ok for now)
+    //email validation
     if (!email.includes("@") || email.startsWith("@") || email.endsWith("@")) {
       return res.status(400).json({ message: "Enter a valid email" });
     }
