@@ -27,7 +27,7 @@ function App() {
     setMessage("");
 
     try {
-      const res = await axios.post("http://localhost:5000/feedback", form);
+      const res = await axios.post("https://feedback-form-spectent-services-1.onrender.com/feedback", form);
 
       setMessage(res.data.message);
       setIsError(false);
